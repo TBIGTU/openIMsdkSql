@@ -5,26 +5,14 @@ export type ClientUser = { [key: string]: unknown };
 
 export function localUsers(db: Database): QueryExecResult[] {
   return db.exec(
-    `
-      create table if not exists 'local_users' (
-            'user_id' varchar(64),
-            'name' varchar(255),
-            'face_url' varchar(255),
-            'create_time' integer,
-            'app_manger_level' integer,
-            'ex' varchar(1024),
-            'attached_info' varchar(1024),
-            'global_recv_msg_opt' integer,
-             primary key ('user_id')
-        )
-    `
+    "CREATE TABLE IF NOT EXISTS `local_users`(`user_id` varchar(64),`nickname` varchar(255),`face_url` varchar(255),`create_time` integer,`app_manger_level` integer,`ex` varchar(1024),`attached_info` varchar(1024),`global_recv_msg_opt` integer,`phone_number` varchar(32),`gender` integer,`birth` integer,`email` varchar(32),`birth_str` varchar(32),`status` integer,PRIMARY KEY (`user_id`))"
   );
 }
 
 export function getLoginUser(db: Database, userID: string): QueryExecResult[] {
   return db.exec(
     `
-        select *, name as nickname from local_users where user_id = '${userID}'  limit 1;
+        select * from local_users where user_id = '${userID}'  limit 1;
     `
   );
 }

@@ -5,20 +5,7 @@ export type LocalStranger = { [key: string]: any };
 
 export function localStranger(db: Database): QueryExecResult[] {
   return db.exec(
-    `
-    create table if not exists 'local_stranger'
-        (
-            'user_id'             varchar(64),
-            'name'                varchar(255),
-            'face_url'            varchar(255),
-            'create_time'         integer,
-            'app_manger_level'    integer,
-            'ex'                  varchar(1024),
-            'attached_info'       varchar(1024),
-            'global_recv_msg_opt' integer,
-            PRIMARY KEY ('user_id')
-        )
-      `
+    "CREATE TABLE IF NOT EXISTS `local_stranger` (`user_id` varchar(64),`nickname` varchar(255),`face_url` varchar(255),`create_time` integer,`app_manger_level` integer,`ex` varchar(1024),`attached_info` varchar(1024),`global_recv_msg_opt` integer,`phone_number` varchar(32),`gender` integer,`birth` integer,`email` varchar(32),`birth_str` varchar(32),`status` integer,PRIMARY KEY (`user_id`))"
   );
 }
 

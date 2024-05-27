@@ -40,8 +40,7 @@
   "engines": {
     "node": ">=12.0"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "homepage": "https://github.com/TBIGTU/openIMsdkSql.git",
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
