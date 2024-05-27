@@ -1,7 +1,7 @@
 {
-  "name": "openIMsdkSql",
+  "name": "openimsdksql",
   "version": "1.0.0",
-  "description": "open im sdk for web",
+  "description": "openimsdksqlopenimsdksql",
   "source": "src/index.ts",
   "main": "lib/index.js",
   "unpkg": "lib/index.umd.js",
@@ -31,21 +31,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OpenIMSDK/Open-IM-SDK-Web-Wasm.git"
+    "url": "https://github.com/TBIGTU/openIMsdkSql.git"
   },
   "license": "MIT",
   "author": {
-    "name": "blooming",
-    "email": "blooming2477@gmail.com",
-    "url": "https://github.com/Bloomingg"
+    "name": "coco"
   },
   "engines": {
     "node": ">=12.0"
   },
   "keywords": [
-    "openim"
   ],
-  "homepage": "https://github.com/OpenIMSDK/Open-IM-SDK-Web-Wasm#readme",
+  "homepage": "https://github.com/TBIGTU/openIMsdkSql.git",
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
     "@commitlint/config-conventional": "^16.2.4",
