@@ -47,7 +47,7 @@ export async function insertLoginUser(userStr: string): Promise<string> {
   try {
     const db = await getInstance();
     const user = convertToSnakeCaseObject(
-      convertObjectField(JSON.parse(userStr), { nickname: 'nickname' })
+      convertObjectField(JSON.parse(userStr), { nickname: 'name' })
     ) as ClientUser;
 
     const execResult = databaseInsertLoginUser(db, user);
@@ -68,7 +68,7 @@ export async function updateLoginUser(userStr: string): Promise<string> {
   try {
     const db = await getInstance();
     const user = convertToSnakeCaseObject(
-      convertObjectField(JSON.parse(userStr), { nickname: 'nickname' })
+      convertObjectField(JSON.parse(userStr), { nickname: 'name' })
     ) as ClientUser;
 
     const execResult = databaseUpdateLoginUser(db, user);

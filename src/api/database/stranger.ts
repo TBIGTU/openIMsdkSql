@@ -44,7 +44,7 @@ export function setStrangerInfo(
       item =>
         convertToSnakeCaseObject(
           convertObjectField(item, {
-            nickname: 'nickname',
+            nickname: 'name',
           })
         ) as LocalStranger
     );
