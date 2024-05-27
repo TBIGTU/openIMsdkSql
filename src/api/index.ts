@@ -41,13 +41,13 @@ function initWorker() {
   if (isViteEnvironment) {
     workerUrl = workerUrl.href.replace(
       '.vite/deps',
-      'open-im-sdk-wasm/lib'
+      'openimsdksql/lib'
     ) as unknown as URL;
   }
   if (isNuxtEnvironment) {
     workerUrl = workerUrl.href.replace(
       '.cache/vite/client/deps',
-      'open-im-sdk-wasm/lib'
+      'openimsdksql/lib'
     ) as unknown as URL;
   }
   worker = new Worker(workerUrl, {
@@ -118,8 +118,7 @@ function registeMethodOnWindow(
 
     try {
       _logWrap(
-        `=> (invoked by go wasm) run ${
-          realName ?? name
+        `=> (invoked by go wasm) run ${realName ?? name
         } method with args ${JSON.stringify(args)}`
       );
       const response = await rpc.invoke(name, ...args, { timeout: 5000000 });

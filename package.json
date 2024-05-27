@@ -1,6 +1,6 @@
 {
   "name": "openimsdksql",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "openimsdksqlopenimsdksql",
   "source": "src/index.ts",
   "main": "lib/index.js",
