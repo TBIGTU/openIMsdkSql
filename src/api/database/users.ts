@@ -29,6 +29,7 @@ export async function getLoginUser(userID: string): Promise<string> {
 
     return formatResponse(
       converSqlExecResult(execResult[0], 'CamelCase', [], {
+        //坑
         name: 'nickname',
       })[0]
     );
@@ -47,7 +48,7 @@ export async function insertLoginUser(userStr: string): Promise<string> {
   try {
     const db = await getInstance();
     const user = convertToSnakeCaseObject(
-      convertObjectField(JSON.parse(userStr), { nickname: 'name' })
+      convertObjectField(JSON.parse(userStr), { nickname: 'nickname' })
     ) as ClientUser;
 
     const execResult = databaseInsertLoginUser(db, user);
@@ -68,7 +69,7 @@ export async function updateLoginUser(userStr: string): Promise<string> {
   try {
     const db = await getInstance();
     const user = convertToSnakeCaseObject(
-      convertObjectField(JSON.parse(userStr), { nickname: 'name' })
+      convertObjectField(JSON.parse(userStr), { nickname: 'nickname' })
     ) as ClientUser;
 
     const execResult = databaseUpdateLoginUser(db, user);

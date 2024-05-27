@@ -20,6 +20,7 @@ export async function getStrangerInfo(userIDListStr: string): Promise<string> {
 
     return formatResponse(
       converSqlExecResult(execResult[0], 'CamelCase', [], {
+        //坑
         name: 'nickname',
       })
     );
@@ -44,7 +45,7 @@ export function setStrangerInfo(
       item =>
         convertToSnakeCaseObject(
           convertObjectField(item, {
-            nickname: 'name',
+            nickname: 'nickname',
           })
         ) as LocalStranger
     );
