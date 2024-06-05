@@ -21,10 +21,10 @@ export function localStranger(db: Database): QueryExecResult[] {
       'email' varchar(32),
       'birth_str' varchar(32),
       'status' integer,
-      'tenantId' integer,
-      'subTenantId' integer,
-      'userCenterId' integer,
-      'yxImId' varchar(32),
+      'tenant_id' integer,
+      'sub_tenant_id' integer,
+      'user_center_id' integer,
+      'yx_im_id' varchar(32),
       PRIMARY KEY ('user_id')
     )
     `
