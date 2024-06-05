@@ -21,6 +21,10 @@ export function localUsers(db: Database): QueryExecResult[] {
       'email' varchar(32),
       'birth_str' varchar(32),
       'status' integer,
+      'tenantId' integer,
+      'subTenantId' integer,
+      'userCenterId' integer,
+      'yxImId' varchar(32),
       PRIMARY KEY ('user_id')
     )
     `
