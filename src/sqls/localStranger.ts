@@ -25,6 +25,9 @@ export function localStranger(db: Database): QueryExecResult[] {
       'sub_tenant_id' integer,
       'user_center_id' integer,
       'yx_im_id' varchar(32),
+      'position_id' varchar(32),
+      'position_name' varchar(128),
+      'hire_date' varchar(32),
       PRIMARY KEY ('user_id')
     )
     `
